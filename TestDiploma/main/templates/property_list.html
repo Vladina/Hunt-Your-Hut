@@ -5,6 +5,11 @@
     <title>Property List</title>
 </head>
 <body>
-this is property list
+{% block content %}
+{% for instance in object_list %}
+<h2>{{ instance.address }}</h2>
+<p>{{ instance.location }}</p>
+{% endfor %}
+{% endblock %}
 </body>
 </html>
