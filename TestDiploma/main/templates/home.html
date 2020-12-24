@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home page</title>
+    <title>
+        {% block title %}
+        Home Page
+        {% endblock %}
+
+    </title>
 </head>
 <body>
 Hello, welcome to the Hunt Your Hut!
+<p></p>
+{% block content %}
+    <form action="{% url 'home' %}" method="get">
+    {% csrf_token %}
+{#    {{ PropertyForm.as_p }}#}
+
+        {% for property in all %}
+        Address: {{ property.address }}<br/>
+        Size: {{ property.size }}<br/>
+        Price: {{ property.price }}<br/>
+            <hr>
+        </form>
+
+{% endfor %}
+{% endblock %}
+
 </body>
 </html>

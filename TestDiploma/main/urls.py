@@ -1,8 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 
-from main import views
+from .views import tallin, home
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('home/', home, name='home'),
+    path('tallin/', tallin, name='tallin')
 
 ]
