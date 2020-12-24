@@ -57,7 +57,7 @@ ROOT_URLCONF = 'TestDiploma.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['main/templates']
+        'DIRS': ['main/templates','user/templates']
         ,
         'APP_DIRS': True,
         'OPTIONS': {

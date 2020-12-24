@@ -3,9 +3,12 @@
 {% block content %}
     <form action="{% url 'tallin' %}" method="get">
     {% csrf_token %}
-    {{ PropertyForm.as_p }}
-        </form>
-    {% for property in all %}
+ <table>
+     {% for property in context %}
     {{ property.address }} {{ property.size }}
+         </table>
+        </form>
+
 {% endfor %}
 {% endblock %}
+
