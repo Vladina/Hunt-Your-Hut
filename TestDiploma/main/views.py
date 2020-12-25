@@ -55,27 +55,6 @@ class PropertyView(View):
         return render(request, 'tallin.html', {'context': context})
 
 
-class PropertyCreateView(CreateView):
-    template_name = 'property_create.html'
-
-    def get(self, request, *args, **kwargs):
-        form = PropertyForm()
-        context = {'form': form}
-        return render(request, self.template_name, context)
-
-    def post(self, request, *args, **kwargs):
-        form = PropertyForm(request.POST)
-        if form.is_valid():
-            form.save()
-            form = PropertyForm()
-        context = {'form': form}
-        return render(request, self.template_name, context)
-
-    def form_valid(self, form):
-        print(form.cleaned_data)
-        return super().form_valid(form)
-
-
 class PropertyListView(ListView):
     template_name = 'property_list.html'
     queryset = Property.objects.all()
@@ -88,17 +67,3 @@ class PropertyListView(ListView):
         return render(request, self.template_name, context)
 
 
-class CustomPropertyView(PropertyListView):
-    template_name = 'property_create.html'
-    queryset = Property.objects.filter(location__name="Kiev")
-
-
-class PropertyDetailView(DetailView):
-    template_name = 'property_detail.html'
-
-    def get(self, request, id=None, *args, **kwargs):
-        context = {}
-        if id is not None:
-            obj = get_object_or_404(Property, id=id)
-            context['object'] = obj
-        return render(request, self.template_name, context)
