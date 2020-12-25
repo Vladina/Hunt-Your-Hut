@@ -7,6 +7,7 @@ from .views import (
     PropertyDetailView,
     PropertyCreateView,
     PropertyView,
+    BootstrapFilterView
                     )
 
 urlpatterns = [
@@ -16,5 +17,6 @@ urlpatterns = [
     path('create/',PropertyCreateView.as_view(), name='property-create'),
     path('<int:id>',PropertyDetailView.as_view(), name='property-detail'),
     path('property_create/',CustomPropertyView.as_view(), name='property-create'),
+    path('',BootstrapFilterView, name='bootstrap'),
 
 ]

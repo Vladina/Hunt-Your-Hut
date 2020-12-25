@@ -11,6 +11,9 @@ from django.views import View
 
 
 # Create your views here.
+def BootstrapFilterView(request):
+    return render(request, 'bootstrap_form.html', {})
+
 class HomeView(View):
     template_name = 'home.html'
 
