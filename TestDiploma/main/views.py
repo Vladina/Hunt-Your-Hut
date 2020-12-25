@@ -4,15 +4,42 @@ from django.views.generic import (
     CreateView,
     ListView,
     DetailView,
-    UpdateView
 )
 from .forms import PropertyForm
 from django.views import View
 
 
-# Create your views here.
+# http://127.0.0.1:8000/?address_contains=4&size=4&price=4&city=Choose...
+
+def is_valid_queryparam(param):
+    return param != '' and param is not None
+
 def BootstrapFilterView(request):
-    return render(request, 'bootstrap_form.html', {})
+    qs = Property.objects.all()
+    cities = City.objects.all()
+    address_contains_query = request.GET.get('address_contains')
+    size_query = request.GET.get('size')
+    price_query = request.GET.get('price')
+    city = request.GET.get('city')
+
+    if is_valid_queryparam(address_contains_query):
+        qs = qs.filter(address__icontains=address_contains_query)
+
+    if is_valid_queryparam(size_query):
+        qs = qs.filter(size__gt=size_query)
+
+    if is_valid_queryparam(price_query):
+        qs = qs.filter(price__gt=price_query)
+
+    if is_valid_queryparam(city) and city != 'Choose...':
+        qs = qs.filter(location__name=city)
+
+    context = {
+        'queryset': qs,
+        'cities': cities
+    }
+    return render(request, 'bootstrap_form.html', context)
+
 
 class HomeView(View):
     template_name = 'home.html'
@@ -75,6 +102,3 @@ class PropertyDetailView(DetailView):
             obj = get_object_or_404(Property, id=id)
             context['object'] = obj
         return render(request, self.template_name, context)
-
-
-
