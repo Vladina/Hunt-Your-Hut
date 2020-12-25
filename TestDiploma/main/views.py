@@ -36,13 +36,6 @@ def BootstrapFilterView(request):
 
 
 # classes below are used for demonstration purposes
-class HomeView(View):
-    template_name = 'home.html'
-
-    def get(self, request, *args, **kwargs):
-        all_properties = Property.objects.all
-        return render(request, self.template_name, {'all': all_properties})
-
 
 class PropertyView(View):
     def get(self, request, *args, **kwargs):

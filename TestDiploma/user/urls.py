@@ -1,12 +1,10 @@
 from django.urls import path, include
+from .views import UserRegisterView
 
-from django.contrib.auth.models import User
-from .views import MySignupView
 
 urlpatterns = [
+    path('register/', UserRegisterView.as_view(), name='register'),
 
-# path('login', MyLoginView.as_view()),
-# path('logout', LogoutView.as_view()),
-    path('signup/', MySignupView.as_view()),
+
 
 ]

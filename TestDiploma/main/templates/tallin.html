@@ -1,14 +1,23 @@
-{% extends 'home.html' %}
-{% block title %} Tallin {% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tallin Properties</title>
+</head>
+<body>
+{% block title %} <h1>Tallin</h1> {% endblock %}
 {% block content %}
     <form action="{% url 'tallin' %}" method="get">
     {% csrf_token %}
  <table>
+     <h3>Properties:</h3>
      {% for property in context %}
-    {{ property.address }} {{ property.size }}
+    Address:{{ property.address }} Size: {{ property.size }}
          </table>
         </form>
-
 {% endfor %}
 {% endblock %}
+
+</body>
+</html>
 
