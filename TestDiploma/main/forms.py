@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms
-from .models import Property, City
+from .models import Property
 
 
 class PropertyForm(ModelForm):

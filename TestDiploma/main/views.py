@@ -1,18 +1,12 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import City, Property
-from django.views.generic import (
-    CreateView,
-    ListView,
-    DetailView,
-)
-from .forms import PropertyForm
+from django.views.generic import ListView
 from django.views import View
 
 
-# http://127.0.0.1:8000/?address_contains=4&size=4&price=4&city=Choose...
-
 def is_valid_queryparam(param):
     return param != '' and param is not None
+
 
 def BootstrapFilterView(request):
     qs = Property.objects.all()
@@ -41,6 +35,7 @@ def BootstrapFilterView(request):
     return render(request, 'bootstrap_form.html', context)
 
 
+# classes below are used for demonstration purposes
 class HomeView(View):
     template_name = 'home.html'
 
@@ -65,5 +60,3 @@ class PropertyListView(ListView):
     def get(self, request, *args, **kwargs):
         context = {'object_list': self.get_queryset()}
         return render(request, self.template_name, context)
-
-
