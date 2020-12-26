@@ -35,7 +35,7 @@ def BootstrapFilterView(request):
     return render(request, 'bootstrap_form.html', context)
 
 
-# classes below are used for demonstration purposes and further project enhancements
+# classes below are used for demonstration purposes
 
 class PropertyView(View):
     def get(self, request, *args, **kwargs):
