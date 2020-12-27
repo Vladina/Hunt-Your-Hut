@@ -1,8 +1,5 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
-
 
 class Property(models.Model):
     address = models.CharField(max_length=255)
@@ -14,7 +11,7 @@ class Property(models.Model):
     test_field = models.CharField(max_length=255)
 
     class Meta:
-        ordering = ['price',]
+        ordering = ['price']
         db_table = 'location'
         app_label = 'main'
         managed = True
@@ -31,7 +28,7 @@ class City(models.Model):
     managed = True
 
     class Meta:
-        ordering = ['name',]
+        ordering = ['name']
         db_table = 'city'
 
     def __str__(self):

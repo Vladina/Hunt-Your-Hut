@@ -8,7 +8,7 @@ def is_valid_queryparam(param):
     return param != '' and param is not None
 
 
-def BootstrapFilterView(request):
+def property_filter_view(request):
     qs = Property.objects.all()
     cities = City.objects.all()
     address_contains_query = request.GET.get('address_contains')
