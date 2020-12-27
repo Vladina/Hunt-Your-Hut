@@ -72,6 +72,12 @@ Enter superuser credentials. Make sure to remember them to be able to login to t
     
 12. On your web browser, open `http://127.0.0.1:8000/admin`, and feel free to add content to the database tables.
 
+## Troubleshooting
+
+###### I cannot apply migrations to the database
+
+If you experience problems with applying migrations to the database, in PyCharm project tree, right-click the **vevn** root folder, and then click **Clean Python Compiled Files**.
+
 
 
 
