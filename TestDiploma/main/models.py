@@ -8,7 +8,6 @@ class Property(models.Model):
     comments = models.CharField(max_length=255)
     contact_number = models.CharField(max_length=16)
     location = models.ForeignKey('City', null=True, on_delete=models.SET_NULL, related_name='property')
-    test_field = models.CharField(max_length=255)
 
     class Meta:
         ordering = ['price']
