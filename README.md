@@ -14,7 +14,7 @@ The Hunt Your Hut web site is intended to provide users with the possibility to 
 
 ## Installation and setting up
 1. Clone the project from: `https://github.com/Vladina/Hunt-Your-Hut.git`.
-2. In Pycharm professional, open the cloned project.
+2. In PyCharm Professional, open the cloned project.
 3. Create a virtual environment for the project. To do this, follow the steps provided below:
    
    a. Open **File**->**Settings**->**Project:TestDiploma**->**Python Interpreter**.
@@ -35,6 +35,7 @@ The Hunt Your Hut web site is intended to provide users with the possibility to 
    c. Enter a name for a new configuration, and then in the **Environment variables** field, add **DJANGO_SETTINGS_MODULE=TestDiploma.settings**. Click **OK**.
    
 7. Create a psql database and a user:
+   
    a. In **pgAmdin 4**, right-click **Login/Group Roles**, then click **Create**->**Login/Group** role.
    
    In the **Create Login/Group Role** dialog that appears, enter a name (for example: _admin_), password (for example: _11111_), and define membership (_postgres_) for a new user.
