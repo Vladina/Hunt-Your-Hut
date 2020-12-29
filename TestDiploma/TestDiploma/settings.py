@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'TestDiploma.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'testdb',
+        'NAME': 'mydb',
         'USER': 'admin',
-        'PASSWORD': '1111',
+        'PASSWORD': '11111',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
