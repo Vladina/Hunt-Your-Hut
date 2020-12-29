@@ -128,9 +128,3 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-<<<<<<< HEAD
-# .idea files
-=======
-#.idea files
->>>>>>> main
-.idea/
