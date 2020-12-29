@@ -66,7 +66,7 @@ The Hunt Your Hut web site is intended to provide users with the possibility to 
 
    ```python manage.py migrate```
 
-10. Start the development server: `python manage.py runserver`. Open `http://127.0.0.1:8000/` on your browser to view the app
+10. Start the development server: `python manage.py runserver`. Open `http://127.0.0.1:8000/` on your browser to view the app.
 
 11. Create a superuser to be able to fill in the database table with content. In PyCharm terminal, run:`python manage.py createsuperuser`
 Enter superuser credentials. Make sure to remember them to be able to login to the _admin_ page.
