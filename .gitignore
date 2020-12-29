@@ -133,3 +133,5 @@ dmypy.json
 # .idea files
 .idea/
 >>>>>>> v2
+TestDiploma/.idea/misc.xml
+TestDiploma/.idea/TestDiploma.iml
