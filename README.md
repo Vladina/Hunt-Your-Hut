@@ -19,7 +19,7 @@ The Hunt Your Hut web site is intended to provide users with the possibility to 
    
    a. Open **File**->**Settings**->**Project:TestDiploma**->**Python Interpreter**.
    
-   b. In **Python Interpreter** dialog, click the **Settings** icon, and then click **Add**.
+   b. In the **Python Interpreter** dialog, click the **Settings** icon, and then click **Add**.
    
    c. In the **Add Python Interpreter** dialog that appears, select **Virtual Environment**, and then click **OK**.
 4. Make sure, that Django support is enabled for your project. To do this, in **Settings**->**Languages & Frameworks**, select **Django**, and then select the **Enable Django Support** check-box.
@@ -28,7 +28,7 @@ The Hunt Your Hut web site is intended to provide users with the possibility to 
 5. Install the project dependencies: `pip install -r requirements.txt`.
 6. Add project debug configuration:
    
-   a. In PyCharm toolbar, click **Add Configuration**.
+   a. On the PyCharm toolbar, click **Add Configuration**.
    
    b. In the **Run/Debug Configuration** dialog that appears, click the **Add** icon (**+**), and then select **Django Server**.
    
