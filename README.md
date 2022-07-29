@@ -44,7 +44,7 @@ The Hunt Your Hut web site is intended to provide users with the possibility to 
    
    b. Create a new database. Right-click **Databases**, select **Create**->**Database**. 
    
-   In the **Create Database** dialog that appears, specify a name for a new database(for example: _mydb_) and owner (_admin_), and then click **Save**.
+   In the **Create Database** dialog that appears, specify a name for a new database (for example: _mydb_) and owner (_admin_), and then click **Save**.
 
     
 8. In **TestDiploma\settings.py**, set the database settings, as in the example below:
